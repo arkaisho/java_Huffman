@@ -73,6 +73,9 @@ public class Main {
             for (String ch : content.split("")) {
                 buffer += codeMap.get(ch);
             }
+
+            System.out.println(buffer);
+
             for(String b: buffer.split("(?<=\\G........)")){
                 System.out.println(b+"("+Integer.parseInt(b,2)+")");
                 outputStream.write(Integer.parseInt(b,2));
