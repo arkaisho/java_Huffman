@@ -1,16 +1,10 @@
 package main;
 
 import models.Huffman;
-import models.Node;
-import models.Trie;
-
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
+
         //PARAMETERS READING
         String filename = "";
         String destiny = "";
@@ -26,10 +20,9 @@ public class Main {
         System.out.println("Origin: " + filename);
         System.out.println("Destiny: " + destiny);
 
-        //CONTENT CAPTURE AND DICTIONARY INITIALIZATION
+        //LEITURA DE CONTEUDO DE ARQUIVO E COMPRESSÃO
         Huffman huffman = new Huffman();
         String compressed = huffman.compress(filename,destiny);
         System.out.println(compressed);
-
     }
 }
