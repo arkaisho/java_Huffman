@@ -1,19 +1,13 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-
 public class Node implements Comparable<Node> {
     public Character ch;
     public int freq;
     public Node left;
     public Node right;
-    public boolean isValue;
 
     public Node(Character ch, boolean isValue) {
         this.ch = ch;
-        this.isValue = isValue;
         this.freq = 1;
     }
 
@@ -21,7 +15,6 @@ public class Node implements Comparable<Node> {
         this.freq = freq;
         this.left = left;
         this.right = right;
-        this.isValue = isValue;
     }
 
     public boolean isLeaf() {
